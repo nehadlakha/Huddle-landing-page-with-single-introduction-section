@@ -1,0 +1,157 @@
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --softMagenta: hsl(300, 69%, 71%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./images/bg-desktop.svg), var(--violet);
+    overflow-y: hidden;
+}
+
+#icon{
+    width: 200px;
+    margin: 60px 45px -5px 100px;
+}
+
+.illustration{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: space-around;
+    column-gap: 60px;
+    margin-top: 10vh;
+}
+
+.illustration img{
+    width: 690px;
+    margin-left: 100px;
+}
+
+.description{
+    color: white;
+    width: 500px;
+    padding-top: 40px;
+}
+
+.description h1{
+    font-weight: 600;
+    font-size: 42px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.description p{
+    font-family: 'Poppins', sans-serif;
+    margin-top: -10px;
+    margin-bottom: unset;
+    font-size: 16px;
+}
+
+button{
+    color: var(--violet);
+    padding: 18px 73px;
+    border-radius: 40px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 16px;
+    margin-top: 17px;
+}
+
+button:hover{
+    background-color: var(--softMagenta);
+    color: white;
+}
+.icon{
+    position: absolute;
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+}
+.fa{
+    color: white;
+    margin-right: 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+.fa-facebook-f{
+    padding: 10px 12px;
+    align-self: center;
+}
+.fa-twitter{
+    padding: 11px 9px;
+}
+.fa-instagram{
+    padding: 11px;
+}
+.fa:hover{
+    color: var(--softMagenta);
+    border: 2px solid var(--softMagenta);
+}
+
+@media screen and (max-width:375px){
+    body{
+        overflow-x: hidden;
+        overflow-y: scroll;
+        background: url(./images/bg-mobile.svg), var(--violet);
+        background-repeat: no-repeat;
+    }
+
+    #icon{
+        width: 120px;
+        margin: 30px 0 0 30px;
+
+    }
+
+    .illustration{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .illustration img{
+        width: 80%;
+        margin-left: unset;
+        margin-top: unset;
+    }
+
+    .description{
+        width: 80%;
+        text-align: center;
+    }
+    
+    .description h1{
+        font-size: 26px;
+        font-weight: 450;
+    }
+
+    .description p{
+        font-size: 14px;
+        font-weight: 200;
+    }
+
+    button{
+        padding: 11px 68px;
+        font-size: 12px;
+    }
+
+    .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 60px 0 0 0;
+    }
+    .fa{
+        margin-right: 8px;
+        padding: 8px;
+        font-size: small;
+        border: 1px solid white;
+    }
+} 
